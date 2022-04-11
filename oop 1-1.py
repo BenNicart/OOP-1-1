@@ -1,0 +1,63 @@
+from tkinter import *
+window = Tk()
+
+window.geometry("600x500+20+30")
+window.title("Welcome to Python Programming")
+
+#add button widget
+
+btn = Button(window, text = "Click to add", fg="blue")
+btn.place(x= 80, y = 100)
+
+#Add label widget
+
+lbl = Label(window, text = "Student Personal Information", fg= "blue", bg="orange")
+lbl.place(relx=.5, y=50, anchor='center')
+lbl2 = Label(window, text = "Gender", fg="red")
+lbl2.place(x=80, y=150)
+
+#add text field widget
+
+txtfld = Entry(window, bd = 3, font=("verdana",16))
+txtfld.place(x=150, y=100)
+
+#add radio button
+
+v1 = StringVar()
+v2 = StringVar()
+v1.set(1)
+r1 = Radiobutton(window, text="Male", value= v1)
+r1.place(x=80, y=200)
+
+
+r2 = Radiobutton(window, text="Female", value= v2)
+r2.place(x=160, y=200)
+
+v3 = IntVar()
+v4 = IntVar()
+v5 = IntVar()
+chkbox = Checkbutton(window, text="basketball", variable=v3)
+chkbox2 = Checkbutton(window, text="volleyball", variable=v4)
+chkbox3 = Checkbutton(window, text="tennis", variable=v5)
+
+chkbox.place(x=80, y=300)
+chkbox2.place(x=160, y=300)
+chkbox3.place(x=240, y=300)
+
+lbl3 = Label(window, text="Sports")
+lbl3.place(x=80, y=250)
+
+lbl4 = Label(window, text="Subjects")
+lbl4.place(x=80, y=320)
+
+
+data = "Calculus"
+data1 = "Chemistry"
+data2 = "Physics"
+lstbox = Listbox(window, height=5, selectmode='single')
+lstbox.insert(END,data, data1, data2)
+lstbox.place(x=80, y=350)
+
+
+
+window.mainloop()
